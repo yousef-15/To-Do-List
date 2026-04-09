@@ -1,0 +1,139 @@
+body {
+  background-color: #101922;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  color: #f6f7f8;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  width: 450px;
+}
+
+.header {
+  margin-bottom: 17px;
+}
+
+.header p {
+  color: #939393;
+  font-size: 15px;
+}
+
+p,
+h1 {
+  margin: 0;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+.add-task {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.task-input {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #f6f7f8;
+  background-color: #1c232d;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.add-button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #f6f7f8;
+  background-color: #137fec;
+  cursor: pointer;
+}
+
+.task-list {
+  display: grid;
+  gap: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 5px;
+  margin-bottom: 30px;
+}
+
+.task-list::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 5px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background-color: #939393;
+  border-radius: 5px;
+}
+
+.task {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #1c232d;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.task span {
+  color: #f6f7f8;
+  font-size: 15px;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:hover {
+  accent-color: #333333;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: #137fec;
+}
+
+.footer {
+  border-top: #2d3748 1px solid;
+}
+
+.footer p {
+  color: #939393;
+  font-size: 12px;
+  padding: 15px 0;
+  font-weight: 600;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+}
