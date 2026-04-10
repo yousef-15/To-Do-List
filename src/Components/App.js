@@ -30,7 +30,7 @@ export default function App() {
       <Header />
       <AddTask setTasks={setTasks} tasks={tasks} />
       <TaskList tasks={tasks} taskCompleted={taskCompleted} />
-      <CompletedTasks tasks={tasks} />
+      <CompletedTasks tasks={tasks} setTasks={setTasks} />
     </div>
   );
 }
